@@ -18,3 +18,8 @@ Route::middleware('auth:sanctum')->group(function () {
     // V2
     Route::apiResource('v2/posts', PostV2::class);
 });
+
+Route::post('login', [
+    App\Http\Controllers\Api\LoginController::class,
+    'login'
+]);
